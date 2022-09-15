@@ -1,0 +1,25 @@
+Consider the combination of 2 capacitors C1 and C2 with C2 > C1, when connected in parallel, the equivalent capacitance is 15/4 times the equivalent capacitance of the same connected in series. Calculate the ratio of capacitors, C1/C2.
+29/15
+15/11
+15/4
+111/80
+LED is constructed from Ga-As-P semiconducting material. The energy gap of this LED is 1.9 eV. Calculate the wavelength of light emitted and its colou
+654 nm and red colour
+1046 nm and blue colour
+654 nm and orange colour
+1046 nm and red colour
+In a Young's double slit experiment two slits are separated by 2mm and the screen in placed one meter away. When a light of wavelength 500 nm is used, the fringe separation will be :
+0.25 mm
+1 mm
+0.50 mm
+0.75 mm
+a0 = 5.29 × 10-11 m, the wavelength of X-rays is 0.025 nm. Calculate the de Broglie wavelength of X-rays.
+1.32 x 10-10 m
+1.32 x 10-11 m
+1.32 x 10-12 m
+1.32 x 10-13 m
+A light of wavelength 500 nm is incident on a thin film of thickness 0.5 nm. The wavelength of the transmitted light is 500 nm. The refractive index of the film is :
+2.0
+1.5
+1.0
+2.5

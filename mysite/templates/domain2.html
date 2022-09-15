@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Selection</title>
+</head>
+
+<body>
+<!--<div o="test">-->
+    <h1 onmouseover="test()">Self Assessment Portal</h1>
+    <form action="QP_Generate" method=get">
+    <table>
+        <tr>
+            <td onmouseover="test()">Domain</td>
+            <td>
+                <select name="domain" id="">
+                    <option value="1">Select domain</option>
+                    <option value="1">Chemistry</option>
+                    <option value="2">Physics</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> Choose the Language</td>
+            <td>
+                <select name="language" id="">
+                    <option value="en">Select Language</option>
+                    <option value="en">English</option>
+                    <option value="kn">Kannada</option>
+                    <option value="hi">Hindi</option>
+                    <option value="te">Telugu</option>
+                    <option value="ta">Tamil</option>
+                    <option value="bn">Bengali</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="ml">Malayalam</option>
+                    <option value="mr">Marathi</option>
+                    <option value="pa">Punjabi</option>
+                    <option value="ur">Urdu</option>
+                    <option value="ne">Nepali</option>
+
+                </select>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="submit" value="Submit" onclick="test()">
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    function test(){
+    //document.write("HELLOP");
+    console.log("LOGGING");
+    let utter = new SpeechSynthesisUtterance();
+utter.lang = 'en-US';
+utter.text = 'Hello World How are You';
+utter.volume = 1;
+window.speechSynthesis.speak(utter);
+    }
+</script>
+<script>
+let utter = new SpeechSynthesisUtterance();
+utter.lang = 'en-US';
+utter.text = 'Hello World';
+utter.volume = 0.5;
+
+// event after text has been spoken
+utter.onend = function() {
+	alert('Speech has finished');
+}
+
+// speak
+window.speechSynthesis.speak(utter);
+</script>
+</body>
+
+</html>

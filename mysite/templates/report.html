@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .navbar
+    {
+        border: 2px solid red;
+        margin: 5px;
+    }
+    .content
+    {
+        display: flex;
+        border: 2px solid red;
+        justify-content: center;
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <h1>Welcome {{username}}</h1>
+        <div class="alert">
+    </div>
+    </nav>
+    <h2>Result</h2>
+    <p>Score : {{score}}/5</p>
+    <div class="solution">
+       <span>
+        Solutions:
+       </span> <br>{{text}}
+    </div>
+</body>
+</html>

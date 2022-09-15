@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="boolzapp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <title>Peer to Peer Learning</title>
+  </head>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Common */
+
+.navbar1 {
+        border: 4px solid rgb(179, 217, 255);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        border-radius: 8px;
+        background-color: #5A4BDA;
+        font-family: 'Raleway', sans-serif;
+
+   }
+   h1
+   {
+    margin-top: 40px;
+   }
+   .alert
+   {
+    margin-top: 40px;
+    font-family: 'Raleway', sans-serif;
+   }
+
+
+
+   footer.diff {
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        background-color: rgb(89, 91, 107);
+    }
+    .slogan
+    {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        color: cyan;
+
+    }
+
+    .foot1 {
+        display: flex;
+        /* border: 2px solid red; */
+        justify-content: space-around;
+        margin: 0px;
+        padding: 5px;
+        margin-top: 50px;
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        list-style: none;
+    }
+
+    center {
+        margin: 30px;
+        font-family: 'Raleway', sans-serif;
+
+    }
+
+    b {
+        color: cyan;
+    }
+
+    .heart {
+        color: red;
+    }
+
+
+
+
+
+
+
+/* Header  */
+
+
+.header_right {
+  width: 70%;
+  float: right;
+  height: 80px;
+  position: relative;
+  border: 0.5px solid rgba(0,0,0, 0.2);
+  overflow: hidden;
+}
+
+.icons_left, .icons_right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.icons_left i, .icons_right i, .search_bar i {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: grey;
+}
+.header_left img, .header_right img {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.header_right img {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.header_right small {
+  display: block;
+}
+
+
+/* Section */
+
+.container_left {
+  width: 30%;
+  float: left;
+  height: 550px;
+  position: relative;
+  overflow-y: scroll;
+}
+ .contact {
+   position: relative;
+   height: 80px;
+   padding-bottom: 30px;
+   border-bottom: 0.5px solid rgba(0,0,0, 0.4);
+ }
+
+ .contact.active {
+   background-color: rgba(0, 0, 0, 0.15)
+ }
+
+ .contact img, .header_left img {
+   margin-left: 30px;
+   margin-top: 10px;
+
+ }
+ .sentence {
+   display: block;
+   text-align: justify;
+ }
+
+ .name {
+   position: absolute;
+   top: 50%;
+   left: 100px;
+   margin-right: 20px;
+   transform: translateY(-50%);
+   margin-top: 0;
+ }
+.search-bar {
+  width: 100%;
+  display: inline;
+}
+.search_bar i {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.search_bar input {
+  width: 80%;
+  height: 30px;
+  float: right;
+  border: none;
+  margin-top: 10px;
+}
+.chat_list {
+  margin-top: 10px;
+  height: calc(100% - 80px - 30px);
+}
+.container_left .chat_list small {
+  float: right;
+}
+
+.container_right {
+  width: 70%;
+  height: 500px;
+  background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/whatsapp-chat-background-image.jpg");
+  background-size: cover;
+  background-color: aliceblue;
+  float:left;
+  position: relative;
+}
+.message_box.active, .message .message_options.active {
+  display: block;
+}
+
+.message_box {
+  height: 500px;
+  position: relative;
+  overflow-y: scroll;
+  padding: 0 50px;
+  display: none;
+}
+.message_box::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+.message {
+  width: 100%;
+  position: relative;
+}
+
+.message h6 {
+  float: right;
+  margin-right: 10px;
+  color: grey;
+  display: inline;
+}
+.message p {
+  color: black;
+  font-size: 14px;
+}
+.message i {
+  display: none;
+  color: grey;
+  float: right;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 80%;
+  right: 40px;
+  transform: translate(-50%);
+}
+.message:hover i {
+  display: block;
+}
+
+.white {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 45%;
+  float: left;
+  clear: both;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.green {
+  background-color: lightgreen;
+  border-radius: 10px;
+  max-width: 45%;
+  float: right;
+  clear: both;
+  margin-bottom: 15px;
+}
+footer {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  transform: translateY(-110%);
+}
+footer .type_message input {
+  width: 85%;
+  height: 50px;
+  border: none;
+}
+.type_message i {
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.template {
+  display: none;
+}
+.message_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.template .message_options, .message .message_options {
+  display: none;
+  background-color: white;
+  position: absolute;
+  left: 270px;
+  top: 20px;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.message_info, .message_delete {
+  color: black;
+  padding: 15px 15px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+  </style>
+  <body>
+    <nav hover="" class="navbar1">
+      <h1  value="ghj"><a href="third_page" style="text-decoration:none ; color:white">Home</a></h1>
+      <center> <h2>Peer to Peer Learning</h2></center>
+      <div class="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+            </svg> &nbsp; <a href="notify" style="text-decoration:none; color:white"> Alert/Notifications </a>
+      </div>
+
+
+
+  </nav>
+
+
+    <section>
+
+
+      <div class="container_right">
+        <div class="message_container">
+          <div class="message_box active" data-chat="0">
+            <div class="message white">
+              <p>Thank You messaging, we will get back you soon...</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>hello there</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box" data-chat="1">
+            <div class="message white">
+              <p>Thank You messaging, we will get back you soon...</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box" data-chat="2">
+            <div class="message white">
+              <p>Do not spoil what you have by desiring what you have not</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box" data-chat="3">
+            <div class="message white">
+              <p>Human behavior flows from three main sources: desire, emotion, and knowledge</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box" data-chat="4">
+            <div class="message white">
+              <p>The man who moves a mountain begins by carrying away small stones</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box" data-chat="5">
+            <div class="message white">
+              <p>Where the willingness is great, the difficulties cannot be great</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box" data-chat="6">
+            <div class="message white">
+              <p>Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box" data-chat="7">
+            <div class="message white">
+              <p>In the midst of chaos, there is also opportunity. Opportunities multiply as they are seized</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_options">
+                  <div class="message_info">Info</div>
+                  <div class="message_delete">Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <footer>
+            <div class="type_message">
+              <i class="fas fa-smile"></i>
+              <input class="type_here" type="text" placeholder="Type a message">
+              <i class="fas fa-paper-plane"></i>
+              <i class="fas fa-microphone"></i>
+            </div>
+          </footer>
+      </div>
+    </section>
+
+    <div class="template">
+        <div class="message green">
+          <p class="content">Something new</p>
+          <h6 class="message_time">5:55</h6><i class="fas fa-chevron-down"></i>
+          <div class="message_dropdown">
+            <div class="message_options">
+              <div class="message_info">Info</div>
+              <div class="message_delete">Delete</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script >
+        $(function (){
+
+$(".fa-paper-plane").click(function(){
+  var text = $(".type_here").val();
+  if (text) {
+    var new_text = $(".template .message").clone();
+    new_text.children(".content").text(text);
+    new_text.children(".message_time").text(current_time());
+    $(".message_box.active").append(new_text);
+    $(".message_box").scrollTop(10000);
+  };
+  $(".type_here").val("");
+
+  setTimeout (function (){
+    var new_text = $(".template .message").clone();
+    new_text.toggleClass("green white");
+    new_text.children(".content").text("Thank You messaging, we will get back you soon...");
+    new_text.children(".message_time").text(current_time());
+    $(".message_box.active").append(new_text);
+    $(".header_right").find(".message_time").text(current_time());
+    $(".chat_list").children(".contact.active").find(".sentence").text("Thank You messaging, we will get back you soon...").css("color", "black").css("font-weight","Bold");
+    $(".chat_list").children(".contact.active").find(".message_time").text(current_time());
+    $(".message_box").scrollTop(10000);
+  }, 1000);
+
+});
+$(".type_here").keypress(function(e) {
+    var key = e.which;
+    if (key == 13) {
+      $(".fa-paper-plane").click();
+      return false;
+    }
+  });
+
+$(".searchme").keyup(function() {
+    var lookup = $(this).val().toLowerCase();
+    $(".contact").each(function() {
+      if ($(this).find(".firstname").text().toLowerCase().includes(lookup)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+
+$(".contact").click(function() {
+  var talk = $(this).attr("data-chat");
+  var talkscreen = $('.message_box[data-chat="'+talk+'"]');
+  $(".message_box").removeClass("active");
+  $(".contact").removeClass("active");
+  talkscreen.addClass("active");
+  $(this).addClass("active");
+  var name = $(".contact.active").find(".firstname").text();
+  $(".header_right").children(".name").find(".firstname").text(name);
+  var photo = $(this).find("img").attr("src");
+  $(".header_right").children("img").attr("src", photo)
+});
+
+$(document).on("click", ".message i", function() {
+  $(this).parent(".message").find(".message_options").toggleClass("active");
+});
+
+$(document).on("click", ".message_delete", function() {
+  $(this).closest(".message").hide();
+});
+});
+
+function current_time() {
+ var d = new Date();
+ var m = d.getMinutes();
+ var h = d.getHours();
+
+ if (m < 10) {
+   m = "0" + m;
+ };
+ if (h < 10) {
+   h = "0" + h;
+ }
+ return h + ":" + m;
+};
+    </script>
+  </body>
+</html>
