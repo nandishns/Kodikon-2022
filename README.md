@@ -5,8 +5,8 @@ We were among the top 12 teams selected  out 210+ teams of participants.
 ```
 ## Problem statement : 
 
-``` Increasing the efficiency and expanding the reachability of
-learning without any language barriers. ```
+ Increasing the efficiency and expanding the reachability of
+learning without any language barriers. 
 
 
 ## Solution: 
