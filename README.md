@@ -1,15 +1,15 @@
 ## Kodikon-2022
 ```
 24hrs Hackathon conducted by the club Embrione PESU .
-We were among the top 12 teams selected  out 210+ teams of participants.
+We were among the top 10 teams selected  out 210+ teams of participants.
 ```
-## Problem statement : 
+## Project : 
 
  Increasing the efficiency and expanding the reachability of
 learning without any language barriers. 
 
 
-## Solution: 
+## Description: 
 We are aiming more on quality of learning process rather than quantity regardless of background of the student viz.,
 whether he is from rural regional language medium student or who is not offordable to it.
 ->Project Based Learning : This is the better and productive way of learning for all round development of students'
