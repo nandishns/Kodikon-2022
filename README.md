@@ -2,6 +2,7 @@
 ```
 24hrs Hackathon conducted by the club Embrione PESU .
 We were among the top 10 teams selected  out 210+ teams of participants.
+It's a Website built using Django , Javascript , GoogleTrans API , UI/UX .
 ```
 ## Project : 
 
@@ -10,8 +11,7 @@ learning without any language barriers.
 
 
 ## Description: 
-We are aiming more on quality of learning process rather than quantity regardless of background of the student viz.,
-whether he is from rural regional language medium student or who is not offordable to it.
+
 ->Project Based Learning : This is the better and productive way of learning for all round development of students'
 progress. There would be weekly based projects , demo videos and reviews at regular interval of time with regular
 feedback to their research or completion of task
@@ -23,8 +23,6 @@ assessment is the one which helps to take test according to their convenience , 
 which they're comfortable in with in limited duration of time and relatable assessment pattern.
 ->Peer to Peer learning : This feature enhances learning process and increases collaborative learning amongst peer
 group. Users can discuss concepts and many other study related stuffs and help each other.
-->Teaching- Learning Marketplace/Volunteer matchmaking : Many students are hesitant to speak out to clear their doubts
-at class. This platform covers it . One can reach out to teacher or Mentor (seniors ) and get their doubt solved .
 ->Updates on Scholarship and important nation wide exams
 
 ## Business Prospective
